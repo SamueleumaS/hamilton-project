@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexander Hamilton</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #f5f5f5; 
+        }
+
+        h1 {
+            color: #1a237e; 
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        #funFact {
+            display: none;
+            color: #ff5722; 
+            margin-top: 20px;
+        }
+
+        #funFactButton {
+            background-color: #4caf50; 
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Alexander Hamilton</h1>
+
+    <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcROt-1AVkObRPuSlog0GzSVp7aUlYnP65C6NQ_BhdODjvjdJvWg8iCkPOQdnTNMfOdWNuidUYtFDRyQnd0" alt="Alexander Hamilton Portrait">
+
+    <p>
+        Alexander Hamilton was a Founding Father of the United States and a key figure in the development of the country's financial system.
+    </p>
+
+    <button id="funFactButton" onclick="showFunFact()">Show Fun Fact</button>
+
+    <p id="funFact">Did you know? The Broadway show "Hamilton" was created by Lin-Manuel Miranda and premiered in 2015, winning numerous awards and gaining widespread acclaim.</p>
+
+    <script>
+        function showFunFact() {
+            var funFact = document.getElementById("funFact");
+            var button = document.getElementById("funFactButton");
+
+            if (funFact.style.display === "none") {
+                funFact.style.display = "block";
+                button.innerHTML = "Hide Fun Fact";
+            } else {
+                funFact.style.display = "none";
+                button.innerHTML = "Show Fun Fact";
+            }
+        }
+    </script>
+</body>
+</html>
